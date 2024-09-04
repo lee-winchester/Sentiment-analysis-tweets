@@ -1,14 +1,14 @@
-**Sentiment_analysis_of_tweets**
+<h2>Sentiment_analysis_of_tweets<h2></h2>
 Project to implement a Twitter sentiment analysis model for overcoming the challenges to identify the Twitter tweets text sentiments (positive, negative)
 
-**Introduction**
+<h3>Introduction</h3>
 Sentiment analysis refers to identifying as well as classifying the sentiments that are expressed in the text source. Tweets are often useful in generating a vast amount of sentiment data upon analysis. These data are useful in understanding the opinion of the people about a variety of topics. Therefore, we need to develop an Automated Machine Learning Sentiment Analysis Model in order to compute the customer perception using NER. Due to the presence of non-useful characters (collectively termed as the noise) along with useful data, it becomes difficult to implement models on them.
 
-**Dataset**
+<h3>Dataset</h3>
 Twitter Sentiment Analysis Detecting hatred tweets, provided by Analytics Vidhya Link to the datasets :
 • https://www.kaggle.com/arkhoshghalb/twitter-sentiment-analysis-atredspeech?select=train.csv
-**
-Project Pipeline**
+
+<h3>Project Pipeline</h3>
 • Understand the problem statement
 • Import Necessary Dependencies
 • Read and Load the Dataset
@@ -21,10 +21,10 @@ Project Pipeline**
 • Model Building
 • Determining which model is best (Hypothesis testing)
 
-**Pre-processing**
+<h3>Pre-processing</h3>
 The pre-processing of the text data is an essential step as it makes the raw text ready for mining, i.e., it becomes easier to extract information from the text and apply machine learning algorithms to it.
 
-Cleaning data
+<h3>Cleaning data</h3>
 The objective of this step is to clean noise those are less relevant to find the sentiment of tweets such as punctuation, special characters, numbers, and terms which don’t carry much weightage in context to the text.
 Further, we will be extracting numeric features from our data. This feature space is created using all the unique words present in the entire data. So, if we pre-process our data well, then we would be able to get a better-quality feature space.
 A) Removing Twitter Handles (@user)
@@ -33,7 +33,7 @@ C) Removing Short Words
 D) Tokenization
 E) Stemming
 
-**Exploratory Data Analysis & visualization**
+<h3>Exploratory Data Analysis & visualization</h3>
 Will explore the cleaned tweets text. Exploring and visualizing data, no matter whether its text or any other data, is an essential step in gaining insights.
 Did the following:
 • Plot various graphs for positive and negative tweets on the basis of Label
@@ -49,7 +49,7 @@ Did the following:
 • Plotting Bar plots of top hashtag counts in Non-offensive & Offensive tweets
 • Plotting a pie chart counting number of rows containing a hashtag
 
-**Feature selection**
+<h3>Feature selection</h3>
 TF-IDF Features
 TF-IDF works by penalizing the common words by assigning them lower weights while giving importance to words which are rare in the entire corpus but appear in good numbers in few documents.
 Important terms related to TF-IDF:
@@ -57,7 +57,7 @@ Important terms related to TF-IDF:
 • IDF = log(N/n), where, N is the number of documents and n is the number of documents a term t has appeared in.
 • TF-IDF = TF*IDF
 
-**Model building:**
+<h3>Model building:</h3>
 In the problem statement we have used three different models respectively
 • Logistic Regression
 • Decision Tree Classifier
@@ -70,7 +70,7 @@ After training the model we then apply the evaluation measures to check how the 
 • F1 Scores
 • Confusion Matrix
 
-**Hypothesis testing:**
+<h3>Hypothesis testing:</h3>
 Examining machine learning models via statistical significance tests requires some expectations that will influence the statistical tests used.
 An approach to evaluate each model on the same k-fold cross-validation split of the data and calculates each split score. That would give a sample of ten scores for ten-fold cross-validation. Then, we can compare those scores using the paired statistical test.
 Due to using the same data rows to train the model more than once, the assumption of independence is violated; hence, the test would be biased.
@@ -83,10 +83,10 @@ Significance level is 0.05
 let’s assume a significance threshold of α=0.05 for rejecting the null hypothesis that both algorithms perform equally well on the dataset and conduct the 5x2_cv _t_test.
 used the paired_ttest_5x2cv function from the evaluation module to calculate the t and p value for both models.
 
-**Conclusion**
+<h3>Conclusion</h3>
 Upon evaluating all the models we can conclude the following details i.e.
 
-**Accuracy:**
+<h4>Accuracy:</h4>
 As far as the accuracy of the model is concerned Random Forest Classifier performs better than Decision Tree Classifier which in turn performs better than Logistic Regression.
 
 F1-score:
